@@ -2,6 +2,8 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 
+
+
 // Lazy load Home
 const Home = lazy(() => import("./Pages/Home"));
 

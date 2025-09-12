@@ -4,15 +4,16 @@
   "version": "0.0.0",
   "homepage": "https://chaitu5597.github.io/Biofactor/",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
+ "scripts": {
+  "dev": "vite",               
+  "build": "vite build",       
+  "predeploy": "npm run build", 
+  "deploy": "gh-pages -d dist" 
+},
+
+
   "dependencies": {
+    "framer-motion": "^12.23.12",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.1",
