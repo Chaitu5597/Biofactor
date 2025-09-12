@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Chrome, Safari */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
