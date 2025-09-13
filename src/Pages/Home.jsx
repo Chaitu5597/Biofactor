@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion"; // for animation
 import { DiJava } from "react-icons/di";
 import CategoryCards from "../Components/micro_home/CategoryCards";
+import AppBar from "../Components/AppBar";
+import Footer from "../Components/Footer";
 
 // Reusable animation variants
 const fadeInUp = {
@@ -219,6 +221,7 @@ const Home = () => {
         <CategoryCards/>
 
       </section>
+
     </div>
   );
 };

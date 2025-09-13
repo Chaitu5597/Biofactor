@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import CategoryCards from "./Components/micro_home/CategoryCards"; // ✅ Import it
+import AppBar from "./Components/AppBar";
 
 // Lazy load Home
 const Home = lazy(() => import("./Pages/Home"));
@@ -20,6 +21,8 @@ const AppRoutes = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category-cards" element={<CategoryCards />} /> 
+          <Route path="/AppBar" element={<AppBar />} />
+          <Route path="/Home" element={<Home/>} />
         </Routes>
       </Suspense>
     </Router>
