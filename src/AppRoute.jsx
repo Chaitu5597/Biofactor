@@ -1,32 +1,22 @@
-import React, { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Spinner } from "react-bootstrap";
-import CategoryCards from "./Components/micro_home/CategoryCards"; // ✅ Import it
-import AppBar from "./Components/AppBar";
+import React, { lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LayoutPage from './Pages/Layout/LayoutPage';
+import AgriculturePage from './Components/agriculture/AgriculturePage';
 
-// Lazy load Home
-const Home = lazy(() => import("./Pages/Home"));
+// Lazy load pages
+const Home = lazy(() => import('./Pages/Home'));
+const Agriculture = lazy(() => import('./Components/agriculture/AgriculturePage'));
 
-const AppRoutes = () => {
-  return (
-    <Router>
-      <Suspense
-        fallback={
-          <div style={{ textAlign: "center", marginTop: "20%" }}>
-            <h1>Loading...</h1>
-            <Spinner animation="border" variant="primary" />
-          </div>
-        }
-      >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/category-cards" element={<CategoryCards />} /> 
-          <Route path="/AppBar" element={<AppBar />} />
-          <Route path="/Home" element={<Home/>} />
-        </Routes>
-      </Suspense>
-    </Router>
-  );
-};
+const AppRoute = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<LayoutPage />}>
+        <Route index element={<Home />} />
+        <Route path='/Home' element={<Home />} />
+        <Route path="/agriculturePage" element={<AgriculturePage />} />
+      </Route>
+    </Routes>
+  </Router>
+);
 
-export default AppRoutes;
+export default AppRoute;
