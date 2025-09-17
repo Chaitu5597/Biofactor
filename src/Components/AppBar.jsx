@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // for hamburger icons
 import { pictures } from '../assets/images/pictires'; // Fixed typo in import path
-
+import { useLocation } from "react-router-dom";
 const AppBar = () => {
+  const location = useLocation()
   const [isOpen, setIsOpen] = useState(false);
   const [isBioDropdownOpen, setIsBioDropdownOpen] = useState(false);
-
+  const isHome = location.pathname === "/Home";
   // Navigation items with specific paths
   const navItems = [
     { name: "About Us", path: "/about" },
@@ -29,7 +30,7 @@ const AppBar = () => {
   const handleMouseLeave = () => setIsBioDropdownOpen(false);
 
   return (
-    <header className="w-full shadow-md fixed top-0 left-0 z-50" style={{ backgroundColor: 'rgba(3,10,26,0.4)' }}>
+    <header className={`w-full shadow-md top-0 left-0 z-50 ${isHome ? "fixed" : "sticky"}`} style={{ backgroundColor: 'rgba(3,10,26,0.4)' }}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
         {/* Logo - Image with responsive sizing */}
         <div className="flex-shrink-0 ml-4 lg:ml-16">
@@ -60,9 +61,8 @@ const AppBar = () => {
                   </a>
                   {/* Dropdown */}
                   <div
-                    className={`absolute left-0 mt-2 w-48 bg-gray-900 shadow-lg rounded-md py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${
-                      isBioDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                    }`}
+                    className={`absolute left-0 mt-2 w-48 bg-gray-900 shadow-lg rounded-md py-1 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ${isBioDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                      }`}
                   >
                     {bioSubItems.map((subItem, subIdx) => (
                       <a
