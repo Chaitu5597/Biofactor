@@ -49,7 +49,7 @@ const AgriculturePage = () => {
           <Elements/>
         
         <section className='p-6 rounded-lg shadow-md w-full"'>
-          <h1 className="text-2xl sm:text-3xl font-bold text-center font-medium">
+          <h1 className="text-2xl text-black sm:text-3xl font-bold text-center font-medium">
             Crop Protection
           </h1>
 

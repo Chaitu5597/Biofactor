@@ -6,7 +6,7 @@ const AppBar = () => {
   const location = useLocation()
   const [isOpen, setIsOpen] = useState(false);
   const [isBioDropdownOpen, setIsBioDropdownOpen] = useState(false);
-  const isHome = location.pathname === "/Home";
+  const isHome = location.pathname === "/Home" || location.pathname === "/";
   // Navigation items with specific paths
   const navItems = [
     { name: "About Us", path: "/about" },

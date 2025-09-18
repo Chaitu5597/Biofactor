@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { FaArrowDown } from "react-icons/fa";
+
 
 const CropProtectionCard = ({ image, title, description, products, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -41,7 +43,7 @@ const CropProtectionCard = ({ image, title, description, products, index }) => {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold font-heading">
+        <h2 className="text-lg text-black sm:text-xl md:text-2xl lg:text-3xl font-semibold font-heading">
           {title}
         </h2>
 
@@ -57,11 +59,11 @@ const CropProtectionCard = ({ image, title, description, products, index }) => {
         >
           {isExpanded ? "Close Products" : "Products"}{" "}
           <motion.span
-            className="inline-block"
+            className="inline-block bg-neutral-50"
             animate={isExpanded ? { rotate: 90 } : { rotate: 270 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            transition={{ type: "spring", stiffness: 300 , }}
           >
-            ➤
+            {FaArrowDown}
           </motion.span>
         </motion.button>
 
