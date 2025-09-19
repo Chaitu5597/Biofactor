@@ -168,7 +168,7 @@ const Elements = () => {
 
       {/* Primary Nutrients */}
       <div className="my-20 flex flex-col items-center">
-        <h2 className="text-2xl md: mb-16 sm:text-3xl font-bold mb-6 text-center">
+        <h2 className="text-2xl md: mb-16 mb-20 sm:text-3xl font-bold mb-6 text-center">
           Primary Nutrients
         </h2>
         <PrimaryNutrientGrid elements={primaryNutrients} />
@@ -176,7 +176,7 @@ const Elements = () => {
 
       {/* Secondary Nutrients */}
       <div className="my-20 flex flex-col items-center">
-        <h2 className="text-2xl md: mb-16 sm:text-3xl font-bold mb-6 text-center">
+        <h2 className="text-2xl md: mb-20 sm:text-3xl font-bold mb-6 text-center">
           Secondary Nutrients
         </h2>
         <SecondaryNutrientGrid elements={secondaryNutrients} />
@@ -184,7 +184,7 @@ const Elements = () => {
 
       {/* Micronutrients */}
       <div className="my-20 flex flex-col items-center">
-        <h2 className="text-2xl md: mb-16  sm:text-3xl font-bold mb-6 text-center">
+        <h2 className="text-2xl md: mb-20  sm:text-3xl font-bold mb-6 text-center">
           Micronutrients
         </h2>
         <MicroNutrientGrid elements={micronutrients} />

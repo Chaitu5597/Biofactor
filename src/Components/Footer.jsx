@@ -11,16 +11,16 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: <FaLinkedin className="inline-block text-2xl hover:text-blue-500 transition-colors duration-300" />, url: 'https://linkedin.com' },
-    { name: 'YouTube', icon: <FaYoutube className="inline-block text-2xl hover:text-red-500 transition-colors duration-300" />, url: 'https://youtube.com' },
+    { name: 'LinkedIn', icon: <FaLinkedin className="inline-block text-2xl hover:text-blue-500 transition-colors duration-300" />, url: 'https://www.linkedin.com/company/biofactorindia/' },
+    { name: 'YouTube', icon: <FaYoutube className="inline-block text-2xl hover:text-red-500 transition-colors duration-300" />, url: 'https://www.youtube.com/@biofactor' },
     { name: 'Facebook', icon: <FaFacebook className="inline-block text-2xl hover:text-blue-500 transition-colors duration-300" />, url: 'https://facebook.com' },
     { name: 'Instagram', icon: <FaInstagram className="inline-block text-2xl hover:text-red-500 transition-colors duration-300" />, url: 'https://instagram.com' },
     { name: 'Twitter', icon: <FaTwitter className="inline-block text-2xl hover:text-blue-500 transition-colors duration-300" />, url: 'https://twitter.com' },
   ];
 
   return (
-    <footer className="bg-gray-500 text-white pt-12  ">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 ml-14 pr-24">
+    <footer className="bg-gray-500 text-white pt-12   ">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 ml-14 pr-24 my-10">
         {/* Logo and Address */}
         <div className="md:col-span-2 flex flex-col md:flex-row items-start gap-6 ml-4">
           <img
@@ -29,7 +29,7 @@ const Footer = () => {
             className="h-20  w-32 object-contain"
           />
           <div className="flex flex-col ml-11">
-            <p className="text-lg font-semibold mb-4 ml-6">Address:</p>
+            <p className="text-lg font-semibold mb-4 ml-6 border-b-2 w-16">Address:</p>
             <div className="flex items-start mb-4 py-1">
               <FaMapPin className="text-green-600 mr-2 mt-1 flex-shrink-0" />
               <p className="text-sm">
@@ -54,7 +54,7 @@ const Footer = () => {
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Services</h3>
+          <h3 className="text-lg font-semibold mb-4 w-16 border-b-2">Services</h3>
           <ul className="space-y-2">
             {services.map((service, idx) => (
               <li key={idx} className="flex items-center text-sm hover:text-green-600 transition-colors duration-300">
@@ -74,7 +74,7 @@ const Footer = () => {
           {/* Newsletter Signup */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Want to be the smartest in your office?</h3>
-            <p className="text-sm mb-4">Sign up for our newsletter:</p>
+            <p className="text-md mb-4 w-48 border-b-2">Sign up for our newsletter :</p>
           </div>
 
           {/* Social Media */}
