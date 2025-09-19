@@ -6,7 +6,7 @@ import { Outlet } from 'react-router-dom';
 const LayoutPage = () => {
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col overflow-hidden min-h-screen">
       <AppBar />
       <main className="flex-grow" >
         <Outlet />

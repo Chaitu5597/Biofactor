@@ -1,8 +1,8 @@
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaArrowDown } from "react-icons/fa";
-
 
 const CropProtectionCard = ({ image, title, description, products, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -10,7 +10,11 @@ const CropProtectionCard = ({ image, title, description, products, index }) => {
 
   const cardVariants = {
     hidden: { opacity: 0, x: index % 2 === 0 ? -100 : 100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
@@ -51,23 +55,37 @@ const CropProtectionCard = ({ image, title, description, products, index }) => {
           {description}
         </p>
 
-        {/* Toggle Button */}
+        {/* Toggle Products */}
+        {/* <motion.button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="bg-gray-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded mt-4 font-heading transition hover:bg-gray-700 text-sm sm:text-base flex items-center justify-center gap-2"
+          whileTap={{ scale: 0.95 }}
+        >
+          {isExpanded ? "Close Products" : "View Products"}
+          <motion.span
+            animate={isExpanded ? { rotate: 180 } : { rotate: 0 }}
+            transition={{ type: "spring", stiffness: 300 , duration:0.9}}
+          >
+            <FaArrowDown />
+          </motion.span>
+        </motion.button> */}
+
         <motion.button
           onClick={() => setIsExpanded(!isExpanded)}
           className="bg-gray-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded mt-4 font-heading transition hover:bg-gray-700 text-sm sm:text-base flex items-center justify-center gap-2"
           whileTap={{ scale: 0.95 }}
         >
-          {isExpanded ? "Close Products" : "Products"}{" "}
+          {isExpanded ? "Close Products" : "View Products"}
           <motion.span
-            className="inline-block bg-neutral-50"
-            animate={isExpanded ? { rotate: 90 } : { rotate: 270 }}
-            transition={{ type: "spring", stiffness: 300 , }}
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }} // slow motion rotation
           >
-            {FaArrowDown}
+            <FaArrowDown />
           </motion.span>
         </motion.button>
 
-        {/* Expandable Section */}
+
+        {/* Expandable Products Section */}
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -76,16 +94,17 @@ const CropProtectionCard = ({ image, title, description, products, index }) => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
+
             >
               {products.map((product, idx) => (
                 <motion.button
                   key={idx}
                   onClick={() => navigate(product.path)}
-                  className="bg-gray-600 min-w-[100px] text-white px-3 py-2 rounded font-heading hover:bg-gray-700 transition flex justify-center items-center gap-1 break-words"
-                  whileHover={{ x: 0 }}
+                  className="bg-gray-500 min-w-[120px] text-white px-4 py-2 rounded-lg font-heading hover:bg-gray-700 transition flex justify-center items-center gap-1 break-words"
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {product.name || product}
+                  {product.element}
                 </motion.button>
               ))}
             </motion.div>

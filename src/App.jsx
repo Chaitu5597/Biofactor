@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import './index.css';
-import { pictures } from './assets/images/pictires';
+import { pictures } from './assets/images/pictires'; // ✅ fix spelling if needed
 
 // Lazy load routes
 const AppRoute = lazy(() => import('./AppRoute'));
@@ -51,7 +51,7 @@ function App() {
         </div>
         <div className="max-w-full bg-gray-800 rounded-full h-1 overflow-hidden shadow-lg">
           <div
-            className="bg-gradient-to-r from-green-600 via-lime-500 to-amber-500 h-full transition-all duration-50"
+            className="bg-gradient-to-r from-green-600 via-lime-500 to-amber-500 h-full transition-all duration-100" // ✅ fixed
             style={{ width: `${progress}%` }}
           ></div>
         </div>
