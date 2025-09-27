@@ -8,6 +8,7 @@ import soilborndisease from './Soilbornediseases.png';
 import Foliar from './Foliar.png';
 import sucking from './sucking.png';
 import Biolarvicides from './Biolarvicides.png';
+import adhar from './AdhargoldBag.png';
 
 
 
@@ -21,6 +22,7 @@ export const pictures = {
   Foliar,
  sucking,
  Biolarvicides,
+ adhar,
 
 
 };
