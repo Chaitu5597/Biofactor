@@ -17,16 +17,17 @@ const AppBar = () => {
     { name: "Minerals", path: "/minerals" },
     { name: "Biological Solutions", path: "/biological-solutions" },
     { name: "Products", path: "/products" },
-    { name: "Contact Us", path: "/contact" },
-    { name: "Career", path: "/Posters" },
+    { name: "Contact Us", path: "/Contactus" },
+    // { name: "Career", path: "/Posters" },
+    { name: "Career", path: "/CareerPage" },
   ];
 
   // Sub-items for Biological Solutions dropdown with specific paths
   const bioSubItems = [
-    { name: "Agriculture", path: "/agriculturePage" },
+    { name: "Soil Health", path: "agriculturePage" },
     { name: "Aquaculture", path: "/biological-solutions/biofertilizers" },
     { name: "Poultry", path: "/biological-solutions/biopesticides" },
-    { name: "Large Animals", path: "/biological-solutions/custom" },
+    { name: "Large Animals", path: "/largemainpage" },
   ];
 
   const handleMouseEnter = () => setIsBioDropdownOpen(true);
