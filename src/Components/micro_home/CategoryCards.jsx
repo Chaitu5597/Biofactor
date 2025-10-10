@@ -74,7 +74,7 @@ const CategoryCards = () => {
     {
       image: pictures.farmer,
       title: "Poultry",
-      path: "/poultry",
+      path: "/Poultry",
     },
     {
       image: pictures.cow,

@@ -17,7 +17,7 @@ const Largemainpage = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <BoostinganimalsHealth />
+        <BoostinganimalsHealth /> 
       </motion.div>
 
       {/* Why Biofactor Section */}

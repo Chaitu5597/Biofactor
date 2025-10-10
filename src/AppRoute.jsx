@@ -13,6 +13,7 @@ import RetailerPage from './Components/retailer/RetailerPage';
 import ProductPage from './Components/product/ProductPage';
 import NutrientsTabs from './Components/agriculture/nutrients_page/NutrientsTabs';
 import SecondaryNutrientsTabs from './Components/agriculture/secondary_nutrients/SecondaryNutrientsTabs';
+import PoultryPage from './Components/poultry/PoultryPage';
 
 // Lazy load pages
 const Home = lazy(() => import('./Pages/Home'));
@@ -37,7 +38,9 @@ const AppRoute = () => (
         <Route path="/elements/Primary nutrients" element={<NutrientsTabs/>}/>
         <Route path="/elements/SecondaryNutrientsTabs" element={<SecondaryNutrientsTabs/>}/>
         <Route path="/product" element={<ProductPage />} />
-         
+        <Route path="/Poultry" element={<PoultryPage />} />
+
+
 
       </Route>
     </Routes>

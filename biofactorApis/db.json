@@ -1,0 +1,83 @@
+
+
+{
+    "poultry": {        
+        "title": "Promoting Poultry Health, Maximizing Growth.",
+        "description": "Poultry includes chickens, ducks, and turkeys, known for egg production and meat.",
+        "Section1": {
+            "title": "Our Poultry Approach",
+            "description": "At Biofactor, we specialize in promoting the health and growth of poultry.Our poultry solutions combine essential minerals, vitamins, and probiotics tostrengthen immunity, improve digestion, and enhance egg and meat production.By supporting optimal nutrition and sustainable farming practices, we help farmersraise healthier, more productive birds while ensuring consistent quality and performance.",
+            "image_link": "https://example.com/images/poultry_approach.jpg",
+                  "videoUrl":"https://www.youtube.com/embed/g-WSntgYl0A?si=sp82LYDnpX1IHnIs&autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playlist=g-WSntgYl0A",
+
+            "cardData": [
+                {
+                    "heading": "500+",
+                    "line1": "Happy Farmers"
+                },
+                {
+                    "heading": "10-LTS",
+                    "line1": "Each buffalo produces 10 liters of milk"
+                },
+                {
+                    "heading": "5,00,000+",
+                    "line1": "Over 5,00,000+ animals have benefited."
+                }
+            ]
+        },
+
+        "items": [
+            {
+                "id": 1,
+                "title": "Rhode Island Red Chicken",
+                "type": "Chicken",
+                "breed": "Rhode Island Red",
+                "age_months": 8,
+                "weight_kg": 2.5,
+                "feed_type": "Mixed",
+                "egg_production_per_week": 6,
+                "image_link": "https://example.com/images/rhode_island_red.jpg"
+            },
+            {
+                "id": 2,
+                "title": "Khaki Campbell Duck",
+                "type": "Duck",
+                "breed": "Khaki Campbell",
+                "age_months": 6,
+                "weight_kg": 2.0,
+                "feed_type": "Grain",
+                "egg_production_per_week": 5,
+                "image_link": "https://example.com/images/khaki_campbell.jpg"
+            }
+        ]
+    },
+    "largeAnimals": {
+        "description": "Large animals include cows, buffaloes, and goats, known for milk and meat production.",
+        "items": [
+            {
+                "id": 1,
+                "title": "Holstein Friesian Cow",
+                "type": "Cow",
+                "breed": "Holstein Friesian",
+                "age_years": 4,
+                "weight_kg": 450,
+                "feed_type": "Grass",
+                "milk_production_liters_per_day": 20,
+                "health_status": "Healthy",
+                "image_link": "https://example.com/images/holstein_friesian.jpg"
+            },
+            {
+                "id": 2,
+                "title": "Murrah Buffalo",
+                "type": "Buffalo",
+                "breed": "Murrah",
+                "age_years": 5,
+                "weight_kg": 500,
+                "feed_type": "Hay",
+                "milk_production_liters_per_day": 15,
+                "health_status": "Healthy",
+                "image_link": "https://example.com/images/murrah_buffalo.jpg"
+            }
+        ]
+    }
+}
