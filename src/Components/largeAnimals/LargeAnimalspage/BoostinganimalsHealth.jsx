@@ -81,7 +81,7 @@ const BoostinganimalsHealth = () => {
       line1: "Happy Farmers"
     },
     {
-      heading: "10Liters",
+      heading: "10-LTS",
       line1: "Each buffalo produces 10 liters of milk", 
     },
     {

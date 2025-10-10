@@ -1,22 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { pictures } from "../../../src/assets/images/pictires";
+import { pictures } from "../../assets/images/pictires";
 
 const Elements = () => {
   const navigate = useNavigate();
 
   const primaryNutrients = [
-    { name: "Nitrogen", path: "/elements/nitrogen", image: pictures.cow },
-    { name: "Phosphorus", path: "/elements/phosphorus", image: pictures.phosphorus },
-    { name: "Potassium", path: "/elements/potassium", image: pictures.potassium },
-    { name: "Calcium", path: "/elements/calcium", image: pictures.calcium },
+    { name: "Carbon", path: "/elements/Primary nutrients", image: pictures.cow },
+    { name: "Nitrogen", path: "/elements/Primary nutrients", image: pictures.phosphorus },
+    { name: "Phosphorus", path: "/elements/Primary nutrients", image: pictures.potassium },
+    { name: "Potassium", path: "/elements/Primary nutrients", image: pictures.calcium },
   ];
 
   const secondaryNutrients = [
-    { name: "Magnesium", path: "/elements/magnesium", image: pictures.magnesium },
-    { name: "Sulfur", path: "/elements/sulfur", image: pictures.sulfur },
-    { name: "Silicon", path: "/elements/silicon", image: pictures.silicon },
+    { name: "Calcium", path: "/elements/SecondaryNutrientsTabs", image: pictures.magnesium },
+    { name: "Magnesium", path: "/elements/SecondaryNutrientsTabs", image: pictures.sulfur },
+    { name: "Sulfur", path: "/elements/SecondaryNutrientsTabs", image: pictures.silicon },
   ];
 
   const micronutrients = [
@@ -26,15 +26,15 @@ const Elements = () => {
     { name: "Copper", path: "/elements/copper", image: pictures.copper },
     { name: "Boron", path: "/elements/boron", image: pictures.boron },
     { name: "Molybdenum", path: "/elements/molybdenum", image: pictures.molybdenum },
-   
+
     // { name: "Nickel", path: "/elements/nickel", image: pictures.nickel },
     // { name: "Cobalt", path: "/elements/cobalt", image: pictures.cobalt },
     // { name: "Sodium", path: "/elements/sodium", image: pictures.sodium },
   ];
 
-  const micronutrient=[
-     { name: "Chlorine", path: "/elements/chlorine", image: pictures.chlorine },
-     { name: "Nickel", path: "/elements/nickel", image: pictures.nickel },
+  const micronutrient = [
+    { name: "Chlorine", path: "/elements/chlorine", image: pictures.chlorine },
+    { name: "Nickel", path: "/elements/nickel", image: pictures.nickel },
     { name: "Cobalt", path: "/elements/cobalt", image: pictures.cobalt },
     { name: "Sodium", path: "/elements/sodium", image: pictures.sodium },
   ]
@@ -82,7 +82,7 @@ const Elements = () => {
             className="md:w-40 md:h-40 sm:w-24 sm:h-24 object-cover rounded-lg shadow-lg"
           />
           <span className="mt-2 font-medium text-center text-sm sm:text-base">{el.name}</span>
-         
+
         </motion.div>
       ))}
     </motion.div>
@@ -130,7 +130,7 @@ const Elements = () => {
           <img
             src={el.image}
             alt={el.name}
-           className="w-16 h-16 md:w-40 md:h-40 sm:w-20 sm:h-20 object-cover rounded-lg shadow-lg"          />
+            className="w-16 h-16 md:w-40 md:h-40 sm:w-20 sm:h-20 object-cover rounded-lg shadow-lg" />
           <span className="mt-2 font-medium text-center text-sm sm:text-base">{el.name}</span>
         </motion.div>
       ))}
@@ -153,7 +153,7 @@ const Elements = () => {
           <img
             src={el.image}
             alt={el.name}
-           className="w-16 h-16 md:w-40 md:h-40 sm:w-20 sm:h-20 object-cover rounded-lg shadow-lg"          />
+            className="w-16 h-16 md:w-40 md:h-40 sm:w-20 sm:h-20 object-cover rounded-lg shadow-lg" />
           <span className="mt-2 font-medium text-center text-sm sm:text-base">{el.name}</span>
         </motion.div>
       ))}
@@ -194,4 +194,4 @@ const Elements = () => {
   );
 };
 
-export default Elements;
+export default Elements; 
