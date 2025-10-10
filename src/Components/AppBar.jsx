@@ -28,7 +28,7 @@ const AppBar = () => {
   const bioSubItems = [
     { name: "Soil Health", path: "agriculturePage" },
     { name: "Aquaculture", path: "/biological-solutions/biofertilizers" },
-    { name: "Poultry", path: "/biological-solutions/biopesticides" },
+    { name: "Poultry", path: "/Poultry" },
     { name: "Large Animals", path: "/largemainpage" },
   ];
 
