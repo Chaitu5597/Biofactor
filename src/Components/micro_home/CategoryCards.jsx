@@ -4,67 +4,67 @@ import { pictures } from '../../assets/images/pictires';
 import TestMony from "../TestMony";
 
 const CategoryCards = () => {
-  const navigate = useNavigate(); 
- 
-// const products = [
-//   {
-//     title: "Aadhaar-gold",
-//     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1&controls=0&loop=1&playlist=6NjUdYGYpJo&modestbranding=1&rel=0",
-//     imageSrc: pictures.adhar,
-//     weight: "4 Kilograms",
-//     form: "Granules",
-//     volume: "4 Liter",
-//     usage: "Organic",
-//     price: "$300",
-//   },
-//   {
-//     title: "Aadhaar-silver",
-//     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1",
-//     imageSrc: pictures.adhar,
-//     weight: "2 Kilograms",
-//     form: "Powder",
-//     volume: "2 Liter",
-//     usage: "Organic",
-//     price: "$180",
-//   },
-//   {
-//     title: "Aadhaar-silver",
-//     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1",
-//     imageSrc: pictures.adhar,
-//     weight: "2 Kilograms",
-//     form: "Powder",
-//     volume: "2 Liter",
-//     usage: "Organic",
-//     price: "$180",
-//   },
-//   {
-//     title: "Aadhaar-silver",
-//     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1",
-//     imageSrc: pictures.adhar,
-//     weight: "2 Kilograms",
-//     form: "Powder",
-//     volume: "2 Liter",
-//     usage: "Organic",
-//     price: "$180",
-//   },
-//   {
-//     title: "Aadhaar-silver",
-//     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1",
-//     imageSrc: pictures.adhar,
-//     weight: "2 Kilograms",
-//     form: "Powder",
-//     volume: "2 Liter",
-//     usage: "Organic",
-//     price: "$180",
-//   },
-// ];
+  const navigate = useNavigate();
+
+  // const products = [
+  //   {
+  //     title: "Aadhaar-gold",
+  //     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1&controls=0&loop=1&playlist=6NjUdYGYpJo&modestbranding=1&rel=0",
+  //     imageSrc: pictures.adhar,
+  //     weight: "4 Kilograms",
+  //     form: "Granules",
+  //     volume: "4 Liter",
+  //     usage: "Organic",
+  //     price: "$300",
+  //   },
+  //   {
+  //     title: "Aadhaar-silver",
+  //     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1",
+  //     imageSrc: pictures.adhar,
+  //     weight: "2 Kilograms",
+  //     form: "Powder",
+  //     volume: "2 Liter",
+  //     usage: "Organic",
+  //     price: "$180",
+  //   },
+  //   {
+  //     title: "Aadhaar-silver",
+  //     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1",
+  //     imageSrc: pictures.adhar,
+  //     weight: "2 Kilograms",
+  //     form: "Powder",
+  //     volume: "2 Liter",
+  //     usage: "Organic",
+  //     price: "$180",
+  //   },
+  //   {
+  //     title: "Aadhaar-silver",
+  //     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1",
+  //     imageSrc: pictures.adhar,
+  //     weight: "2 Kilograms",
+  //     form: "Powder",
+  //     volume: "2 Liter",
+  //     usage: "Organic",
+  //     price: "$180",
+  //   },
+  //   {
+  //     title: "Aadhaar-silver",
+  //     videoUrl: "https://www.youtube.com/embed/6NjUdYGYpJo?autoplay=1&mute=1",
+  //     imageSrc: pictures.adhar,
+  //     weight: "2 Kilograms",
+  //     form: "Powder",
+  //     volume: "2 Liter",
+  //     usage: "Organic",
+  //     price: "$180",
+  //   },
+  // ];
 
 
   const categories = [
     {
       image: pictures.growth,
       title: "Agriculture",
-      path: "/agriculturePage", 
+      path: "/agriculturePage",
     },
     {
       image: pictures.fish,
@@ -79,7 +79,7 @@ const CategoryCards = () => {
     {
       image: pictures.cow,
       title: "Large Animals",
-      path: "/large-animals",
+      path: "/largemainpage",
     },
   ];
 
@@ -111,7 +111,7 @@ const CategoryCards = () => {
       ))}
 
 
-{/* <div>
+      {/* <div>
    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 p-4">
       {products.map((product, index) => (
         <TestMony key={index} {...product} />
@@ -121,7 +121,7 @@ const CategoryCards = () => {
 </div> */}
 
 
-      
+
     </div>
   );
 };

@@ -6,7 +6,7 @@ const AppBar = () => {
   const location = useLocation()
   const [isOpen, setIsOpen] = useState(false);
   const [isBioDropdownOpen, setIsBioDropdownOpen] = useState(false);
-  const isHome = location.pathname === "/Home" || location.pathname === "/";
+  const isHome = location.pathname === "/Home" || location.pathname === "/" || location.pathname === "/largemainpage";
 
 
 
@@ -20,6 +20,8 @@ const AppBar = () => {
     { name: "Contact Us", path: "/Contactus" },
     // { name: "Career", path: "/Posters" },
     { name: "Career", path: "/CareerPage" },
+    { name: "Media", path: "/Media" },
+    { name: "Dealer", path: "/Dealer" },
   ];
 
   // Sub-items for Biological Solutions dropdown with specific paths
@@ -34,7 +36,10 @@ const AppBar = () => {
   const handleMouseLeave = () => setIsBioDropdownOpen(false);
 
   return (
-    <header className={`w-full shadow-md top-0 left-0 z-50 ${isHome ? "fixed" : "sticky"}`} style={{ backgroundColor: 'rgba(3,10,26,0.4)' }}>
+    <header className={`w-full shadow-md top-0 left-0 z-50 ${isHome ? "fixed" : "sticky"}`} style={{
+      backgroundColor: isHome ? 'rgba(3,10,26,0.4)' : '#15803d'
+    }}
+    >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-24">
         {/* Logo - Image with responsive sizing */}
         <div className="flex-shrink-0 ml-4 lg:ml-16">

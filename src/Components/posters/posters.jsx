@@ -247,14 +247,14 @@ const Posters = () => {
     { id: 1, title: "soilborndisease", year: "2010", genre: "Sci-Fi", image: pictures.soilborndisease },
     { id: 2, title: "Foliar", year: "2014", genre: "Sci-Fi", image: pictures.Foliar },
     { id: 3, title: "Foliar", year: "2008", genre: "Action", image: pictures.Foliar },
-    { id: 4, title: "soilborndisease", year: "2019", genre: "Action", image: pictures.soilborndisease  },
-    { id: 5, title: "sucking", year: "2019", genre: "Drama", image: pictures.sucking  },
+    { id: 4, title: "soilborndisease", year: "2019", genre: "Action", image: pictures.soilborndisease },
+    { id: 5, title: "sucking", year: "2019", genre: "Drama", image: pictures.sucking },
     { id: 6, title: "Foliar", year: "2021", genre: "Action", image: pictures.Foliar },
     { id: 7, title: "Iron Man", year: "2008", genre: "Action", image: "https://via.placeholder.com/300x400" },
   ];
 
-  const handleseemore = (title)=>{
-   navigate("/seemore", { state: { title, items: movies } });
+  const handleseemore = (title) => {
+    navigate("/seemore", { state: { title, items: movies } });
   }
 
   return (

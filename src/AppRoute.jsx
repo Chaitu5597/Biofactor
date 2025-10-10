@@ -7,6 +7,12 @@ import SeeMorePage from './Components/posters/SeeMorePage';
 import Contactus from './Components/Contactus';
 import CareerPage from './Components/career/CareerPage';
 import Largemainpage from './Components/largeAnimals/Largemainpage';
+import OurCow from './Components/largeAnimals/LargeAnimalspage/OurCow';
+import Media from './Components/media/Media';
+import RetailerPage from './Components/retailer/RetailerPage';
+import ProductPage from './Components/product/ProductPage';
+import NutrientsTabs from './Components/agriculture/nutrients_page/NutrientsTabs';
+import SecondaryNutrientsTabs from './Components/agriculture/secondary_nutrients/SecondaryNutrientsTabs';
 
 // Lazy load pages
 const Home = lazy(() => import('./Pages/Home'));
@@ -24,6 +30,14 @@ const AppRoute = () => (
         <Route path="/Contactus" element={<Contactus/>}/>
         <Route path="/CareerPage" element={<CareerPage/>}/>
         <Route path="/largemainpage" element={<Largemainpage/>}/>
+        <Route path="/OurCow" element={<OurCow/>}/>
+        <Route path="/Media" element={<Media/>}/>
+        <Route path="/Dealer" element={<RetailerPage/>}/>
+        <Route path="/products" element={<ProductPage/>}/>
+        <Route path="/elements/Primary nutrients" element={<NutrientsTabs/>}/>
+        <Route path="/elements/SecondaryNutrientsTabs" element={<SecondaryNutrientsTabs/>}/>
+        <Route path="/product" element={<ProductPage />} />
+         
 
       </Route>
     </Routes>
