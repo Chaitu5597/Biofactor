@@ -10,6 +10,7 @@
             "image_link": "https://example.com/images/poultry_approach.jpg",
                   "videoUrl":"https://www.youtube.com/embed/g-WSntgYl0A?si=sp82LYDnpX1IHnIs&autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playlist=g-WSntgYl0A",
 
+
             "cardData": [
                 {
                     "heading": "500+",
@@ -22,6 +23,34 @@
                 {
                     "heading": "5,00,000+",
                     "line1": "Over 5,00,000+ animals have benefited."
+                }
+            ]
+        },
+
+        "Section2":{
+            "title": "Why Choose Biofactor for Poultry?",
+            "videoUrl":"https://www.youtube.com/embed/g-WSntgYl0A?autoplay=0&mute=1&controls=1",
+            "description":"At Biofactor, our mission is to empower sustainable farming through innovative biotechnology, ensuring animal health and growth naturally.",
+            "points": [
+                {
+                    "id": 1,
+                    "text": "Comprehensive Nutrition: Our poultry solutions provide a balanced blend of essential nutrients, including vitamins, minerals, and amino acids, to support overall health and productivity."
+                },
+                {
+                    "id": 2,
+                    "text": "Immune Support: We incorporate probiotics and antioxidants to strengthen the immune system, helping birds resist diseases and recover faster from illnesses."
+                },
+                {
+                    "id": 3,
+                    "text": "Growth Enhancement: Our formulations are designed to promote optimal growth rates, improve feed conversion ratios, and enhance muscle development for better meat quality."
+                },
+                {
+                    "id": 4,
+                    "text": "Egg Production: We focus on improving egg quality and production rates by providing nutrients that support reproductive health and shell strength."
+                },
+                {
+                    "id": 5,
+                    "text": "Sustainability: Our products are developed with sustainability in mind, promoting eco-friendly farming practices that reduce environmental impact while maintaining high productivity."
                 }
             ]
         },

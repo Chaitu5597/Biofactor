@@ -18,7 +18,7 @@ const AppBar = () => {
     { name: "Biological Solutions", path: "/biological-solutions" },
     { name: "Products", path: "/products" },
     { name: "Contact Us", path: "/Contactus" },
-    // { name: "Career", path: "/Posters" },
+    { name: "Banners", path: "/Posters" },
     { name: "Career", path: "/CareerPage" },
     { name: "Media", path: "/Media" },
     { name: "Dealer", path: "/Dealer" },

@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import VideoStatsSection from "./poultry_micro/VideoStatsSection";
+import AnimatedVideoSection from "./poultry_micro/AnimatedVideoSection";
+import TestimonialSlider from "../testimonialSlider/TestimonialSlider";
 
 const PoultryPage = () => {
   const [poultry, setPoultry] = useState(null);
@@ -19,14 +21,23 @@ const PoultryPage = () => {
 
         const data = await response.json();
 
-        // Map Section1 for VideoStatsSection
-        const sectionData = {
-          title: data.Section1.title,
-          cardData: data.Section1.cardData,
-          videoUrl:
-            data.Section1.videoUrl,
+        // 🟢 Structure data for both sections 
+        const poultryData = {
+          section1: {
+            title: data.Section1.title,
+            videoUrl: data.Section1.videoUrl,
+            cardData: data.Section1.cardData,
+          },
+          section2: {
+            title: data.Section2.title,
+            description: data.Section2.description,
+            videoUrl: data.Section2.videoUrl,
+            reverse: data.Section2.reverse || false,
+           
+          },
         };
-        setPoultry(sectionData);
+
+        setPoultry(poultryData);
       } catch (err) {
         console.error("Error fetching data:", err);
         setError(err.message);
@@ -38,16 +49,32 @@ const PoultryPage = () => {
     fetchData();
   }, []);
 
-  if (loading) return <p className="text-center mt-20 text-lg">Loading...</p>;
-  if (error) return <p className="text-center mt-20 text-red-500">Error: {error}</p>;
+  if (loading)
+    return <p className="text-center mt-20 text-lg">Loading...</p>;
+  if (error)
+    return <p className="text-center mt-20 text-red-500">Error: {error}</p>;
 
   return (
-    <VideoStatsSection
-      mainHeading={poultry.title}
-      videoUrl={poultry.videoUrl}
-      overlayColor="bg-black bg-opacity-40"
-      cardData={poultry.cardData}
-    />
+    <div className="flex flex-col gap-20">
+      {/* 🟩 Section 1 — Stats + Video */}
+      <VideoStatsSection
+        mainHeading={poultry.section1.title}
+        videoUrl={poultry.section1.videoUrl}
+        overlayColor="bg-black bg-opacity-40"
+        cardData={poultry.section1.cardData}
+      />
+
+      {/* 🟨 Section 2 — Animated Video Section */}
+      <AnimatedVideoSection
+        videoUrl={poultry.section2.videoUrl}
+        heading={poultry.section2.title}
+        description={poultry.section2.description}
+        reverse={poultry.section2.reverse}
+      />
+
+        <TestimonialSlider/>
+      
+    </div>
   );
 };
 
